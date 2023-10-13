@@ -1,12 +1,12 @@
 {
-  "name": "css-loader",
-  "version": "6.8.1",
+  "name": "@koga73/css-loader",
+  "version": "6.9.0",
   "description": "css loader module for webpack",
   "license": "MIT",
   "repository": "webpack-contrib/css-loader",
   "author": "Tobias Koppers @sokra",
-  "homepage": "https://github.com/webpack-contrib/css-loader",
-  "bugs": "https://github.com/webpack-contrib/css-loader/issues",
+  "homepage": "https://github.com/koga73/css-loader",
+  "bugs": "https://github.com/koga73/css-loader/issues",
   "funding": {
     "type": "opencollective",
     "url": "https://opencollective.com/webpack"
@@ -50,7 +50,7 @@
     "postcss": "^8.4.29",
     "postcss-modules-extract-imports": "^3.0.0",
     "postcss-modules-local-by-default": "^4.0.3",
-    "postcss-modules-scope": "^3.0.0",
+    "@koga73/postcss-modules-scope": "^3.1.0",
     "postcss-modules-values": "^4.0.0",
     "postcss-value-parser": "^4.2.0",
     "semver": "^7.5.4"

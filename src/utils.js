@@ -8,7 +8,7 @@ import path from "path";
 import modulesValues from "postcss-modules-values";
 import localByDefault from "postcss-modules-local-by-default";
 import extractImports from "postcss-modules-extract-imports";
-import modulesScope from "postcss-modules-scope";
+import modulesScope from "@koga73/postcss-modules-scope";
 
 const WEBPACK_IGNORE_COMMENT_REGEXP = /webpackIgnore:(\s+)?(true|false)/;
 
@@ -778,7 +778,7 @@ function getModulesPlugins(options, loaderContext) {
       localByDefault({ mode }),
       extractImports(),
       modulesScope({
-        generateScopedName(exportName) {
+        generateScopedName(exportName, resourceFile, rawCss, node) {
           let localIdent;
 
           if (typeof getLocalIdent !== "undefined") {
@@ -794,6 +794,7 @@ function getModulesPlugins(options, loaderContext) {
                 hashDigestLength: localIdentHashDigestLength,
                 hashStrategy,
                 regExp: localIdentRegExp,
+                node,
               }
             );
           }
@@ -813,6 +814,7 @@ function getModulesPlugins(options, loaderContext) {
                 hashDigestLength: localIdentHashDigestLength,
                 hashStrategy,
                 regExp: localIdentRegExp,
+                node,
               }
             );
 
